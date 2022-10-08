@@ -1,4 +1,4 @@
-FROM FROM  maven:3.5-jdk-8 as outputjar
+FROM maven:3.5-jdk-8 as outputjar
 WORKDIR /app01
 COPY . .
 RUN mvn clean package
