@@ -31,15 +31,15 @@ services:
     - MONGO_INITDB_ROOT_USERNAME=devdb
     - MONGO_INITDB_ROOT_PASSWORD=devdb123
     volumes:
-      - mongodb:/data/db
+    - mongo-database:/data/db
     restart: always
     networks:
-    - springappnetwork
+    - spring-mongo-network
     
 volumes:
-  mongodb:
+  mongo-database:
     external: true
     
 networks:
-  springappnetwork:
+  spring-mongo-network:
     external: true
