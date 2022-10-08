@@ -10,11 +10,10 @@ services:
     - MONGO_DB_PASSWORD=devdb123
     ports:
       - 8080:8080
-    working_dir: /opt/app
     depends_on:
-      - mongo
+      - mongodb
     networks:
-    - springappnetwork  
+    - spring-mongo-network 
     deploy:  # This will be considered only in docker swarm.
       replicas: 2
       update_config:
@@ -25,7 +24,7 @@ services:
         delay: 10s
         max_attempts: 5
 
-  mongo:
+  mongodb:
     image: mongo
     environment:
     - MONGO_INITDB_ROOT_USERNAME=devdb
