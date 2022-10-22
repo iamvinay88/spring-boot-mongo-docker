@@ -41,6 +41,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: springhpa
+  namespace: spring-ns
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
