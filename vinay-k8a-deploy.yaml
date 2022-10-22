@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: spring-container
-        image: iamchikka/springboot-mongodb:1
+        image: iamchikka/springboot-mongodb:latest
         resources:
           requests:
            cpu: "400m"
