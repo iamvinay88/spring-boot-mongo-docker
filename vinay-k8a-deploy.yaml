@@ -8,7 +8,7 @@ kind: Deployment
 metadata:
   name: deployspring
   namespace: spring-ns
-  spec:
+spec:
   selector:
     matchLabels:
       app: spring-app
